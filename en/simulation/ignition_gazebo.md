@@ -1,7 +1,7 @@
 # Ignition Gazebo Simulation
 
 :::warning
-Ignition Gazebo supports a single frame (quadcopter) and world (July 2021).
+Ignition Gazebo supports a single frame (quadcopter) and world (September 2022).
 :::
 
 [Ignition Gazebo](https://gazebosim.org/libs/gazebo) is an open source robotics simulator from the _Ignition Robotics Project_.
@@ -35,27 +35,27 @@ These instructions were tested on Ubuntu 18.04 and Ubuntu 20.04
 Ignition Gazebo SITL simulation can be conveniently run through a `make` command as shown below:
 ```bash
 cd /path/to/PX4-Autopilot
-make px4_sitl ignition
+make px4_sitl_ign ign_x500
 ```
-This will run both the PX4 SITL instance and the ignition gazebo client
+This will run both the PX4 SITL instance and the ignition gazebo client.
 
 The supported vehicles and `make` commands are listed below (click on the links to see the vehicle images).
 
 Vehicle | Command
 --- | ---
-quadrotor(iris) | `make px4_sitl ignition`
+quadrotor(x500) | `make px4_sitl_ign ign_x500`
 
 The commands above launch a single vehicle with the full UI.
 *QGroundControl* should be able to automatically connect to the simulated vehicle.
 
 In order to run the simulation without running the ignition gazebo gui, one can use the `HEADLESS=1` flag. For example, the following
 ```
-HEADLESS=1 make px4_sitl ignition
+HEADLESS=1 make px4_sitl_ign ign_x500
 ```
 
 In order to increase the verbose output, `VERBOSE_SIM=1` can be used.
 ```
-VERBOSE_SIM=1 make px4_sitl ignition
+VERBOSE_SIM=1 make px4_sitl_ign ign_x500
 ```
 
 ## Further Information
